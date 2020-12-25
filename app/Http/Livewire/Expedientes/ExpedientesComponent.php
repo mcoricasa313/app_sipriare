@@ -36,6 +36,19 @@ class ExpedientesComponent extends Component
     public $detallesExpedientes;
 
 
+    public $primPes=1;
+
+    public function formWizardSiguiente()
+    {
+        $this->primPes++;
+    }
+
+    public function formWizardAnterior()
+    {
+        if ($this->primPes)
+        $this->primPes--;
+    }
+
     public function render()
     {
         //$this->expedientes = Expedientes::all();

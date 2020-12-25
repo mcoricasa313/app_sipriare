@@ -79,6 +79,12 @@
                                       </div>
 
                                       <div class="col-span-6">
+                                          <label for="street_address" class="block text-sm font-medium text-gray-700">Adjuntar Archivo</label>
+
+
+                                      </div>
+
+                                      <div class="col-span-6">
                                           <label for="street_address" class="block text-sm font-medium text-gray-700">Estado</label>
                                           <select name="estado" wire:model.defer="estado" class="shadow px-3 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                               <option value="1">Activo</option>
@@ -86,6 +92,23 @@
                                           </select>
                                           @error('estado') <span class="text-red-500">{{ $message }}</span>@enderror
                                       </div>
+
+                                      <div class="col-span-6">
+                                          @if($primPes==1)
+                                          <div>
+                                            <h1> feer</h1>
+                                          </div>
+                                          @endif
+                                          @if($primPes==2)
+                                          <div>
+                                              <h1> mi hrmanio todca el pieano</h1>
+                                          </div>
+                                              @endif
+                                                <a wire:click="formWizardAnterior()">anterior</a>
+                                                <a wire:click="formWizardSiguiente()">siguiente</a>
+
+                                      </div>
+
 
                                     <!--
                                       <div class="col-span-6 sm:col-span-6 lg:col-span-2">
