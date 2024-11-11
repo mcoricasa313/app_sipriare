@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Expedientes\ExpedientesComponent;
 use App\Http\Livewire\Usuarios\UsuariosComponent;
 use App\Http\Livewire\Reportes\Charcomponent;
+use App\Http\Livewire\Roles\RolesComponent;
 
 //use App\Http\Livewire\ExpedientesComponent;
 /*
@@ -44,6 +45,7 @@ Route::get('reportes', function () {
 
 Route::get('/expedientes', ExpedientesComponent::class);
 Route::get('/usuarios', UsuariosComponent::class);
+Route::get('/roles', RolesComponent::class);
 Route::get('/reportes', Charcomponent::class);
 
 Route::post('consultarResponsable','ExpedientesComponent@obtenerDatosResponsable');
